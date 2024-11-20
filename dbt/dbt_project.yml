@@ -1,0 +1,61 @@
+# Name of your dbt project
+name: 'heirloom_takehome_project'
+version: '1.0.0'
+profile: 'heirloom_profile'  # Name of the dbt profile to use, configured in profiles.yml
+
+# Define paths for models, tests, snapshots, and seeds
+source-paths: ['models']
+target-path: 'target'  # Compiled SQL files go here
+clean-targets: ['target', 'dbt_modules']  # Folders that dbt will clean during dbt clean
+
+# Optional - configure the path for seeds and snapshots
+data-paths: ['data']  # Folder for CSV seeds if any
+snapshot-paths: ['snapshots']
+
+# Configures how dbt interprets models, tests, and other resource files
+model-paths: ['models']
+test-paths: ['tests']
+
+# Specify where compiled and run results are stored
+analysis-paths: ['analyses']  # Custom SQL analyses
+macro-paths: ['macros']       # Folder for custom macros
+docs-paths: ['docs']
+
+# Specify the default materialization (e.g., table, view) for models
+models:
+  heirloom_project:
+    +materialized: view  # Default materialization is view; can be overridden per model
+
+    # Setting model configurations for each subfolder
+    experiments:
+      +materialized: table
+      +persist_docs: {'description': true}  # Persist descriptions to the database
+    processes:
+      +materialized: table
+      +persist_docs: {'description': true}
+    samples:
+      +materialized: table
+      +persist_docs: {'description': true}
+    instruments:
+      +materialized: table
+      +persist_docs: {'description': true}
+
+# Setting up tests with configurations
+tests:
+  generic:
+    +severity: warn  # Specifies test severity levels, e.g., warn or error
+
+# Configurations for seeds
+seeds:
+  heirloom_project:
+    +schema: seeds  # Schema where seeds will be loaded if you use any CSV data files
+
+# Specify custom target environments (dev, prod) and schemas for models
+target-path: "target"
+profile: "heirloom_profile"
+config-version: 2
+
+# Specify environment-specific settings
+# Customize based on your database setup, such as development and production environments
+vars:
+  environment: 'dev'  # This can be changed to 'prod' for production settings
