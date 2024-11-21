@@ -6,7 +6,7 @@ import os
 conn = sqlite3.connect('my_database.db')
 
 # List of CSV files to import
-csv_files = ['users.csv', 'brands.csv', 'receipts.csv']
+csv_files = ['/Users/dapeng_mac/Desktop/Fetch-Coding-Challenge/CSV/users.csv', '/Users/dapeng_mac/Desktop/Fetch-Coding-Challenge/CSV/brands.csv', '/Users/dapeng_mac/Desktop/Fetch-Coding-Challenge/CSV/receipts.csv']
 
 for csv_file in csv_files:
     if os.path.exists(csv_file):
