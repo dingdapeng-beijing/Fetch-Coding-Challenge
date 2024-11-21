@@ -84,3 +84,12 @@ This table manages the many-to-many relationship between `Receipts` and `Brands`
 
 Please check ERD folder as a representation of the relationships between the tables
 
+# Step 2: Answers predetermined business stakeholder questions
+Please check SQL folder for all 6 business stakeholder questions
+
+# Step 3: Evaluate Data Quality Issues in the Data Provided
+Please check Evaluate Data Quality Issues md file for issues identified and recommendations to address data quality issues
+
+# Step 4: Communicate with Stakeholders
+
+Please refer to the **Communication_with_Stakeholder_Overview** markdown file for a summary of findings and recommendations aimed at maintaining data quality and ensuring scalability for future needs. For more detailed insights—such as how issues were identified, what information is required to resolve data quality challenges, answers to questions about performance and scaling concerns in production, and proposed next steps—please check the **Communication_with_Stakeholder_Details** markdown file.
