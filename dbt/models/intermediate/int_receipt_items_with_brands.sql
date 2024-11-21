@@ -1,4 +1,5 @@
 -- models/receipt_items_with_brands.sql
+-- This model joins ReceiptItems with Brands to provide enriched item-level data.
 SELECT
     ri.receipt_id,
     ri.barcode,

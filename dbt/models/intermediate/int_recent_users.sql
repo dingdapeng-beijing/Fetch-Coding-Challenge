@@ -1,4 +1,5 @@
 -- models/recent_users.sql
+-- This model filters users created within the past six months to support analyses like top-performing brands among new users.
 SELECT
     user_id,
     state,
