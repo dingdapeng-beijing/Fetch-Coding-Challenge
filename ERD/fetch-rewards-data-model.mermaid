@@ -1,0 +1,50 @@
+erDiagram
+    USERS ||--o{ RECEIPTS : "scans"
+    RECEIPTS ||--o{ RECEIPT_ITEMS : "contains"
+    BRANDS ||--o{ RECEIPT_ITEMS : "appears in"
+    
+    USERS {
+        string _id PK
+        string state
+        timestamp createdDate
+        timestamp lastLogin
+        string role
+        boolean active
+    }
+    
+    RECEIPTS {
+        string _id PK
+        string userId FK
+        int bonusPointsEarned
+        string bonusPointsEarnedReason
+        timestamp createDate
+        timestamp dateScanned
+        timestamp finishedDate
+        timestamp modifyDate
+        timestamp pointsAwardedDate
+        int pointsEarned
+        timestamp purchaseDate
+        int purchasedItemCount
+        string rewardsReceiptStatus
+        float totalSpent
+    }
+    
+    RECEIPT_ITEMS {
+        string receiptId FK
+        string brandId FK
+        string description
+        int quantity
+        float price
+        float totalPrice
+    }
+    
+    BRANDS {
+        string _id PK
+        string barcode
+        string brandCode
+        string category
+        string categoryCode
+        string cpg
+        boolean topBrand
+        string name
+    }
