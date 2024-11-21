@@ -93,3 +93,12 @@ Please check Evaluate Data Quality Issues md file for issues identified and reco
 # Step 4: Communicate with Stakeholders
 
 Please refer to the **Communication_with_Stakeholder_Overview** markdown file for a summary of findings and recommendations aimed at maintaining data quality and ensuring scalability for future needs. For more detailed insights—such as how issues were identified, what information is required to resolve data quality challenges, answers to questions about performance and scaling concerns in production, and proposed next steps—please check the **Communication_with_Stakeholder_Details** markdown file.
+
+# Step 5: dbt Model Design
+This dbt project is organized into three layers following best practices to ensure modularity, reusability, and scalability:
+
+1. **Staging Layer**: Cleans and standardizes raw data to create a consistent foundation.
+2. **Intermediate Layer**: Transforms and combines staged data into reusable datasets for analysis.
+3. **Data Marts Layer**: Aggregates and finalizes data tailored to specific business questions and reporting needs.
+
+This layered approach simplifies data workflows, supports scalability, and aligns with dbt modeling principles.
