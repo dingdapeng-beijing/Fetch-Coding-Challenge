@@ -1,4 +1,5 @@
 -- models/monthly_receipts.sql
+-- This model extracts receipts grouped by month to support analyses like identifying the top 5 brands by receipts scanned
 WITH receipts_with_months AS (
     SELECT
         receipt_id,
