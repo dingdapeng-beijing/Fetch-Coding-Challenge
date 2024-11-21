@@ -1,5 +1,5 @@
 # Fetch-Coding-Challenge
-A public repository to submit Analytics Engineer - Coding Challenge
+This is a public repository to submit Analytics Engineer - Coding Challenge
 I'm using PostgreSQL as my SQL dialect.
 
 # Step 1: Diagram the Structured Relational Data Model
